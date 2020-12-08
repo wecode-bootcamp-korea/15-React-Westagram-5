@@ -1,17 +1,15 @@
-import React from 'react';
-import Login from './Login/Login';
-import Main from './Main/Main';
-import {BrowserRouter, Switch, Route, Router} from 'react-router-dom';
-
-
+import React from "react";
+import LoginHTH from "./Pages/hth/LoginHTH/LoginHTH";
+import MainHTH from "./Pages/hth/MainHTH/MainHTH";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 class Routes extends React.Component {
-    render() {
+  render() {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Login} />
-          <Route exact path="/main" component={Main}></Route>
+          <Route exact path="/hthlogin" component={LoginHTH} />
+          <Route exact path="/hthmain" component={MainHTH}></Route>
         </Switch>
       </BrowserRouter>
     );

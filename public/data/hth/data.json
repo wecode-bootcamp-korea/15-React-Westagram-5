@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "nickname": "wiinnerb",
+      "imageUrl": "./images/hth/friends1.jpg"
+    },
+    {
+      "id": 1,
+      "nickname": "joooniboy",
+      "imageUrl": "./images/hth/friends2.jpg"
+    },
+    {
+      "id": 2,
+      "nickname": "kingth_man",
+      "imageUrl": "./images/hth/my_profile.jpg"
+    },
+    {
+      "id": 3,
+      "nickname": "chaehoon.p",
+      "imageUrl": "./images/hth/friends3.jpg"
+    }
+  ],
+  "comments": [
+    {
+      "id": 0,
+      "nickname": "kingth_man",
+      "text": " 오 앨범 나옴?"
+    },
+    {
+      "id": 1,
+      "nickname": "ash.island",
+      "text": " ㅇㅇ 들어봐!!"
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+.MainHTH {
+  .main-nav {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+    background-color: white;
+    padding: 0 100px;
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      width: 912px;
+      margin: 0 auto;
+
+      .nav-logo {
+        display: flex;
+        padding: 14px 0;
+
+        .nav-logo-img {
+          width: 22px;
+          height: 22px;
+          z-index: 1000;
+        }
+
+        .nav-logo-text {
+          font-family: "Lobster", cursive;
+          font-size: 24px;
+          margin-left: 20px;
+
+          .small-border {
+            border-left: solid 1px rgba(var(--b6a, 219, 219, 219), 1);
+            padding-left: 20px;
+          }
+        }
+      }
+
+      .search-bar {
+        padding: 11px 0;
+
+        .search-input {
+          height: 28px;
+          width: 250px;
+          text-align: center;
+          border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+          border-radius: 3px;
+          font-size: 14px;
+          outline: none;
+          background-size: 13px;
+          background-repeat: no-repeat;
+          background-position-x: 98px;
+          background-color: #fafafa;
+          background-position-y: center;
+
+          &:focus {
+            text-align: start;
+            padding-left: 20px;
+            background-position-x: 2px;
+          }
+        }
+
+        .search-list {
+          border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+          border-bottom: none;
+          border-radius: 3px;
+          background-color: white;
+          width: 290px;
+          margin-left: -20px;
+        }
+      }
+
+      .menu-bar {
+        .menu-icon {
+          width: 22px;
+          height: 22px;
+          margin: 13px 10px;
+        }
+
+        .circle {
+          border-radius: 11px;
+        }
+
+        .profile-button {
+          cursor: pointer;
+        }
+
+        .show-menu-box {
+          height: 160px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          background-color: white;
+          border-radius: 4px;
+          margin-top: -10px;
+          box-shadow: 1px 1px 5px black;
+
+          .in-menu {
+            height: 40px;
+            border-bottom: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+            padding: 13px 0;
+            padding-left: 10px;
+            font-size: 14px;
+
+            &:hover {
+              background-color: #fafafa;
+            }
+
+            span {
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .main-container {
+    .feeds {
+      position: absolute;
+      top: 100px;
+      left: 50%;
+      width: 614px;
+      margin-left: -456px;
+      padding-bottom: 100px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      .main-right {
+        visibility: hidden;
+      }
+      .feeds {
+        margin-left: -325px;
+        left: 50%;
+      }
+      .nav-container {
+        width: 650px;
+      }
+      .main-nav {
+        padding: 0;
+      }
+    }
+
+    .main-right {
+      position: fixed;
+      top: 100px;
+      left: 50%;
+      width: 300px;
+      height: 400px;
+      margin-left: 185px;
+
+      .right-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .right-profile {
+          width: 56px;
+          height: 56px;
+          border-radius: 28px;
+        }
+
+        .right-myname {
+          height: 56px;
+          width: 170px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-left: 18px;
+          font-size: 14px;
+
+          div {
+            margin-top: 4px;
+            margin-left: -15px;
+
+            span {
+              font-weight: bold;
+            }
+          }
+
+          .right-nickname {
+            color: #9a9a9a;
+          }
+        }
+
+        .right-button {
+          color: #0095f6;
+          font-size: 12px;
+          cursor: pointer;
+        }
+      }
+      .right-mid-div {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        margin-top: 20px;
+        font-weight: 600;
+
+        .mid-left-div {
+          font-size: 14px;
+          color: #9a9a9a;
+          font-weight: bold;
+        }
+      }
+
+      .friends {
+        margin-top: 10px;
+
+        .right-container {
+          margin-top: 10px;
+
+          .right-profile {
+            width: 32px;
+            height: 32px;
+            border-radius: 16px;
+            margin-left: 5px;
+          }
+
+          .right-myname {
+            height: 32px;
+            width: 170px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 18px;
+            font-size: 12px;
+
+            div {
+              margin-top: 4px;
+              margin-left: -25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

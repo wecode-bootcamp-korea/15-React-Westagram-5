@@ -12,6 +12,8 @@ class Login extends React.Component {
       error: "",
     };
   }
+
+  /* 메인이동 */
   goToMain = () => {
     this.props.history.push("/main");
   };

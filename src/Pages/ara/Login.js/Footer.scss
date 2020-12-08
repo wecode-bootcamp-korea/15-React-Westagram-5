@@ -1,0 +1,31 @@
+.Footer{
+    /* border: 1px solid; */
+    display: flex;   
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.footer1 a, .footer2 a, .footer3 a {
+    color: #8e8e8e;
+    /* margin: 1px 1px 1px 1px; */
+}
+
+.footer1, .footer2, .footer3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer3{
+    padding-top: 10px;
+}
+.footElement {
+    font-weight:350;
+    font-size: 12px;
+    margin: 3px 8px;
+}
+.classB{
+    font-weight:350;
+    font-size: 12px;
+}

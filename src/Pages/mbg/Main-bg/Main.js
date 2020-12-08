@@ -2,8 +2,26 @@ import React, { Component } from "react";
 import "./Main.scss";
 
 class Main extends Component {
+    
+    constructor() {
+        super();
+        this.state = {
+          value:"",
+
+        };
+    }
+
+   pushComment = (e) => {
+     this.setState({
+      [e.target.comment]: e.target.value,
+    });
+   };
 
     render() {
+      const activateBtn = (this.state.value.length) > 0;
+
+
+
         return (
             <>
                 <div className="mainPage">
@@ -91,11 +109,11 @@ class Main extends Component {
                                     <div className="reactionContents">
                                         <div className="reactionBar">
                                             <div className="reactionIcons">
-                                                <img src="./images/heart.png" className="activityIcon" alt="아이콘"/>
-                                                <img src="./images/chat-bubble.png" className="replyIcon" alt="아이콘"/>
-                                                <img src="./images/airplane.png" className="messageIcon" alt="아이콘"/>
+                                                <img src="./images/heart.png" className="activityIcon" alt="하트 아이콘"/>
+                                                <img src="./images/chat-bubble.png" className="replyIcon" alt="댓글 아이콘"/>
+                                                <img src="./images/airplane.png" className="messageIcon" alt="메시지 아이콘"/>
                                             </div>
-                                            <img src="./images/free-icon-tag-1415025.png" className="bookmarkIcon" alt="아이콘"/>
+                                            <img src="./images/free-icon-tag-1415025.png" className="bookmarkIcon" alt="북마크 아이콘"/>
                                         </div>
                                         <div className="likeNumberBar">
                                             <button className="likePeople"> 좋아요 
@@ -124,9 +142,18 @@ class Main extends Component {
                                         <div className="updateTime"> 3시간 전 </div>
                                         <div className="repleInput">
                                             <div className="inputBar">
-                                                <input id="createComment" placeholder="댓글 달기..."></input>
-                                                <button className="push">게시</button>
-                                            </div>
+                                                <input 
+                                                id="createComment" 
+                                                placeholder="댓글 달기..."
+                                                onfocus="this.placeholder=''"
+                                                value={this.state.value}
+                                                />
+                                                <button id="push"
+                                                        className={activateBtn ? "active" : ""}
+
+                                                >게시</button>
+                                                
+                                           </div>
                                         </div>
                                     </div>
                                 </div>

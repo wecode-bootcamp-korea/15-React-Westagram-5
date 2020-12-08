@@ -395,9 +395,10 @@ ul {
   font-weight: bolder;
   color: skyblue;
 
-&.active {
+  &.active {
     color: blue;
     cursor: pointer;
+  }
 }
 
 .sideBar {

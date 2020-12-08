@@ -1,0 +1,19 @@
+{
+  "prettier.useFlowParser": true,
+  "liveSassCompile.settings.autoprefix": [],
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": null
+    }
+  ],
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+  "prettier.semi": false
+  // "prettier.disableLanguages": ["js"]
+}

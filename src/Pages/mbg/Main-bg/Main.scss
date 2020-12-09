@@ -12,14 +12,12 @@ a {
 
 ul {
   list-style: none;
-  height: 20px;
+  height: auto;
   width: auto;
 }
 
-#signUp {
-  width: 30px;
+li {
   height: 20px;
-  background-color: brown;
 }
 
 .barOutline {
@@ -203,8 +201,10 @@ ul {
 }
 
 .feedContents {
+  position: flex;
+  flex-direction: column;
   width: 614px;
-  height: 916px;
+  height: auto;
   border: #dbdbdb solid 1px;
   border-radius: 3px;
   margin: 0 -1px 60px;
@@ -216,7 +216,7 @@ ul {
   height: 28px;
   padding: 16px;
   left: 4px;
-  border-bottom: #dbdbdb 1px solid;
+  // border-bottom: #dbdbdb 1px solid;
 }
 
 .feedUploader {
@@ -265,16 +265,13 @@ button {
 }
 
 .feedPhoto {
-  margin: 20px 0 0 -16px;
   width: 614px;
   height: 614px;
 }
 
 .reactionContents {
-  margin: -4px 0 0 -16px;
-  width: 614px;
-  height: auto;
-  background-color: white;
+  width: auto;
+  height: 100%;
 }
 
 .reactionBar {
@@ -292,6 +289,7 @@ button {
   width: 100px;
   display: flex;
   justify-content: space-between;
+  background-color: none;
 }
 
 .reactionBar .activityIcon {
@@ -339,9 +337,8 @@ button {
 
 .textBar {
   width: 582px;
-  height: 100px;
+  height: 200px;
   padding: 0 16px;
-  color: #262626;
   font-size: 14px;
 }
 
@@ -365,7 +362,6 @@ button {
 .updateTime {
   width: 598px;
   height: 20px;
-  padding: 0 0 0 16px;
   margin: 0 0 4px;
   font-size: 10px;
   color: #8e8e8e;
@@ -374,8 +370,7 @@ button {
 .inputBar {
   width: 583px;
   height: 56px;
-  margin: 4px 0 0;
-  padding: 0 16px;
+
   border-top: #dbdbdb 1px solid;
 }
 

@@ -21,9 +21,14 @@ class Main extends Component {
     this.setState({
       commentList: this.state.commentList.concat([this.state.value]),
       value:""
-    })
+    });
+  };
 
-   }
+  addCommentEnter = (e) => {
+    if(e.key === "Enter"){
+      this.addComment();
+    }
+  }
 
     render() {
       const activateBtn = (this.state.value.length) > 0;
@@ -164,6 +169,7 @@ class Main extends Component {
                                                 placeholder="댓글 달기..."
                                                 onfocus="this.placeholder=''"
                                                 onChange={this.pushComment}
+                                                onKeyPress={this.addCommentEnter}
                                                 value={this.state.value}
                                                 />
                                                 <button id="push"

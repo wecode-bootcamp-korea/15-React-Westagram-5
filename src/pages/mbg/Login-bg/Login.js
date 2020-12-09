@@ -27,7 +27,6 @@ class Login extends Component {
         })
     }
     
-
     checkValue = (e) => {
         e.preventDefault();
         const { id, password } = this.state;
@@ -43,8 +42,16 @@ class Login extends Component {
         if (!checkPw) {
             alert("비밀번호는 5자리 이상이여야 합니다.")
         }
+    
     };
-  
+      
+    loginEnter = (e) => {
+        if(e.key === "Enter"){
+          this.checkValue();
+        }
+      }
+    
+
     render() {
       const {id, password, hiddenPw} = this.state;
       const activateBtn = (id.length && password.length) > 0;
@@ -67,6 +74,7 @@ class Login extends Component {
                                            placeholder="전화번호, 사용자 이름 또는 이메일"
                                            onfocus="this.placeholder=''"
                                            onChange={this.handleValueInput} 
+                                        //    onKeyPress={this.loginEnter}
                                            value={id}
                                           />
                                 </div>
@@ -79,6 +87,7 @@ class Login extends Component {
                                            placeholder="비밀번호"
                                            onfocus="this.placeholder=''"
                                            onChange={this.handleValueInput} 
+                                           onKeyPress={this.loginEnter}
                                            value={password}
                                            />
                                     <span className="showPw" 
@@ -89,7 +98,7 @@ class Login extends Component {
                                 <div className="login_btn_cover">
                                     <button id="login_btn"
                                             className={activateBtn ? "active" : ""}
-                                            onClick={this.checkValue}>                                         
+                                            onClick={this.checkValue}>  
                                         <Link to="/Main">로그인</Link>
                                     </button>
                                 </div>

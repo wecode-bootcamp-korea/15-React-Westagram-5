@@ -1,10 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import Routes from "./Routes";
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <Routes />,
+
+  document.getElementById("root")
 );

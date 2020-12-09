@@ -1,0 +1,137 @@
+/* right */
+
+.main__right {
+  width: 300px;
+  height: 780px;
+  margin-left: 32px;
+
+  .main__right__myInfo {
+    height: 118px;
+    display: flex;
+    align-items: center;
+    width: 300px;
+  }
+  .main__right__myInfo ul {
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.4s;
+    border-radius: 10px;
+  }
+  .main__right__myInfo ul:hover {
+    background: #000;
+  }
+
+  .list__second p:nth-child(1) {
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .main__right__myInfo ul:hover .myInfo__list p {
+    color: #fff;
+  }
+
+  .main__right__myInfo ul li {
+    cursor: pointer;
+  }
+
+  .main__right__myInfo .myInfo__lists .myInfo__Image {
+    width: 66px;
+    height: 66px;
+    border: 2px solid;
+    background-image: linear-gradient(to right, #755bea, #ff72c0);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .main__right__myInfo .myInfo__lists .myInfo__Image img {
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+  }
+
+  .main__right__myInfo .myInfo__lists .list__second p:last-child {
+    opacity: 0.5;
+  }
+  .main__right__myInfo .myInfo__lists .list__third .change {
+    font-weight: 700;
+    color: #fff;
+    font-size: 14px;
+  }
+
+  .recommend__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .recommend__header span:nth-child(1) {
+    color: #000000;
+    opacity: 0.5;
+    font-weight: 700;
+  }
+  .recommend__header span:nth-child(2) {
+    font-size: 12px;
+    font-weight: 800;
+  }
+  .recommend__container {
+    margin-top: 10px;
+    height: 38px;
+  }
+
+  .recommend__container ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .recommend__container ul li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 7px;
+    transition: all 0.4s;
+    border-radius: 10px;
+  }
+  .recommend__container ul li:hover,
+  .recommend__container ul li:active {
+    background: #000;
+    border-radius: 10px;
+    color: #fff;
+  }
+  .recommend__container ul li .image {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  .recommend__container ul li .image img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+  .recommend__container ul li p:nth-child(1) {
+    font-weight: 800;
+  }
+  .recommend__container ul li p:nth-child(2) {
+    opacity: 0.7;
+  }
+  .recommend__container ul li .recommend__box {
+    width: 200px;
+    cursor: pointer;
+  }
+
+  .recommend__container ul li .follow {
+    font-weight: 800;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}

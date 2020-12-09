@@ -1,6 +1,6 @@
 import React from "react";
-import Login from "./Pages/kcy/Login/Login";
-import Main from "./Pages/kcy/Main/Main";
+import LoginKim from "./Pages/kcy/Login/LoginKim";
+import MainKim from "./Pages/kcy/Main/MainKim";
 import { BrowserRouter, Switch, Route, Router } from "react-router-dom";
 
 class Routes extends React.Component {
@@ -8,9 +8,8 @@ class Routes extends React.Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Login} />
-
-          <Route exact path="/main" component={Main}></Route>
+          <Route exact path="/LoginKim" component={LoginKim} />
+          <Route exact path="/MainKim" component={MainKim} />
         </Switch>
       </BrowserRouter>
     );

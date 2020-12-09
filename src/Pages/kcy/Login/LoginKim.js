@@ -15,7 +15,7 @@ class Login extends React.Component {
 
   /* 메인이동 */
   goToMain = () => {
-    this.props.history.push("/main");
+    this.props.history.push("/MainKim");
   };
 
   /* 아이디 값 체크 */

@@ -4,6 +4,8 @@ import Footer from "./Footer.js";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 
+const API = "http://3.35.19.3:8000/account/signin";
+
 class Login extends React.Component {
   constructor() {
     super();
@@ -20,11 +22,32 @@ class Login extends React.Component {
       productList: [],
     };
   }
-  // handleIdChange = (e) => {this.setState({id: e.target.value})
+  // handleId = (e) => {
+  //   this.setState({ id: e.target.value });
   //   // console.log(e.target.value)
   // };
-  // handlePwChange = (e) => {this.setState({pw: e.target.value})
+  // handlePw = (e) => {
+  //   this.setState({ pw: e.target.value });
   //   // console.log(e.target.value)
+  // };
+  // handleClick = () => {
+  //   fetch(API, {
+  //     method: "POST",
+  //     body: JSON.stringify({
+  //       email: this.state.id,
+  //       password: this.state.pw,
+  //     }),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((result) => {
+  //       if (result.Authorization) {
+  //         alert("success");
+  //         //   localStorage.setItem("token", result.Authorization);
+  //         this.props.history.push("/main");
+  //       } else {
+  //         alert("fail");
+  //       }
+  //     });
   // };
   handleInputValueChange = (e) => {
     const { id, value } = e.target;
@@ -35,6 +58,9 @@ class Login extends React.Component {
   // value들위 비구조화 혹은 구조분해활당 (비구조화하면 this를생략해도된다)
   //ex : const {id, password, hiddenPW} = this.state;
   //render와 return 사이에 선언해줌//함수들은 render위에 선언
+  deleteToken = () => {
+    localStorage.removeItem("token");
+  };
   showPassword = () => {
     // 토글식 : true & fasle
     this.setState({
@@ -76,7 +102,6 @@ class Login extends React.Component {
       <>
         <div className="Login">
           <section>
-            <div className="extraPad1"></div>
             <main className="containerMain">
               <article className="containerArticle">
                 <div className="mainLeft">
@@ -94,7 +119,7 @@ class Login extends React.Component {
                       className="inputContainer"
                       onChange={this.buttonChange}
                     >
-                      <div className="logSec1_1">
+                      <div className="logSecId">
                         <input
                           id="id"
                           type="text"
@@ -102,17 +127,19 @@ class Login extends React.Component {
                           value={id}
                           className="userNameInput"
                           onChange={this.handleInputValueChange}
+                          // onChange={this.handleId}
                           //함수옆에 ()붙으면 즉시실행이라는말 그래서 위와같은경우는 () 안붙지만
                           //arrowFunction같은경우는 붙여야됨 {() => this.handleIdChange()}
                         />
                       </div>
-                      <div className="logSec1_2">
+                      <div className="logSecPw">
                         <input
                           id="pw"
                           type={hiddenPW ? "password" : "text"}
                           className="passWordInput"
                           value={pw}
                           onChange={this.handleInputValueChange}
+                          // onChange={this.handlePw}
                           placeholder="비밀번호"
                         />
                         <span className="showPw" onClick={this.showPassword}>
@@ -120,17 +147,19 @@ class Login extends React.Component {
                         </span>
                       </div>
                     </div>
-                    <div className="logSec1_3">
+                    <div className="logSecBtn">
                       <button
                         type="button"
                         className={btnColor ? "disabledBtn" : "enabledBtn"}
+                        // onClick={this.handleClick}
                         onClick={this.checkValidation}
                         disabled={this.state.btnStatus}
                       >
                         로그인
                       </button>
+                      {/* <button onClick={this.deleteToken}>delete token</button> */}
                     </div>
-                    <div className="logSec1_4">
+                    <div className="logSecUnderBtn">
                       <img
                         className="line1"
                         src="../../../images/aramcho/line.png"
@@ -141,12 +170,9 @@ class Login extends React.Component {
                         src="../../../images/aramcho/line.png"
                       />
                     </div>
-                    <div className="logSec1_5">
+                    <div className="logSecFb">
                       <a>
-                        <img
-                          className="facebook"
-                          src="../../../images/aramcho/facebook.png"
-                        />
+                        <img src="../../../images/aramcho/facebook.png" />
                         Facebook으로 로그인
                       </a>
                     </div>
@@ -156,10 +182,8 @@ class Login extends React.Component {
                   </div>
 
                   <div className="logSec2">
-                    <div className="logSec2_1">
-                      계정이 없으신가요?
-                      <a className="logSec2_2">가입하기</a>
-                    </div>
+                    <div className="logSec2_1">계정이 없으신가요?</div>
+                    <a className="logSec2_2">가입하기</a>
                   </div>
                   <div className="logSec3">
                     앱을 다운로드 하세요.
@@ -183,10 +207,7 @@ class Login extends React.Component {
                 </div>
               </article>
             </main>
-
-            <div className="extraPad2"></div>
             <Footer></Footer>
-            <div className="extraPad3"></div>
           </section>
         </div>
       </>

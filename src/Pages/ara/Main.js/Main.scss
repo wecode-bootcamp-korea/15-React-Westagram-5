@@ -1,300 +1,296 @@
 /* .bodyClass { background-color:#fafafa} */
+
+@media (mind-width: 1300px) and (max-width: 1870) {
+  #allSectionId {
+    width: auto;
+  }
+}
+@media (min-width: 500px) and (max-width: 700px) {
+  #thisMainId {
+    padding-left: 1px;
+    width: auto;
+  }
+  #searchId {
+    display: none;
+  }
+  #logoId {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #iconSecId {
+    align-items: flex-end;
+  }
+  #icon1,
+  #icon2,
+  #icon3,
+  #icon4,
+  #icon5 {
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+}
+@media (min-width: 300px) and (max-width: 1000px) {
+  #mainRightSecId {
+    display: none;
+    right: 1%;
+  }
+}
+
 .allSection {
-    background-color:#fafafa;
-      display: flex;
-      flex-direction: column;
-      position:relative;
-    }  
-    /*this is top navbar css section*/
-    .navWrap {
-      width: 100%;
-      top: 0;
-      display: flex;
-      background-color: white;
-      position: fixed;
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 10px;
-      border-bottom: 1px solid lightgrey;
-      flex-shrink: 5;
-    }
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .navWrap {
+    width: 100%;
+    top: 0;
+    display: flex;
+    background-color: white;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgrey;
+    flex-shrink: 5;
     .navSec {
       display: flex;
       justify-content: center;
       align-items: center;
       padding-top: 10px;
       flex-shrink: 5;
-    }
-    .logo {
-      display: flex;
-      font-size: 22px;
-      padding-right: 240px;
-      flex-shrink: 3;
-      margin-left: -45px;;
-    }
-    .logoTitle{
-        font-family:"Lobster",serif;
-    }
-    .searchContainer {
-      display: grid;
-      grid-template-columns: 1.5rem 4fr 1fr;
-      width: 220px;
-      height: 26px;
-      border: 1px solid #dbdbdb;
-      border-radius: 3px;
-      overflow: hidden;
-      background-color: #fafafa;
-      flex-shrink:5;
-      margin-right:80px;
-    }
-    @media(mind-width:1300px)and (max-width: 1870){
-        #allSectionId {
-            width:auto;
+      .logo {
+        display: flex;
+        font-size: 22px;
+        padding-right: 240px;
+        flex-shrink: 3;
+        margin-left: -45px;
+        div {
+          font-family: "Lobster", serif;
         }
-    }
-    @media (min-width: 500px) and (max-width: 700px) {
-        #thisMainId {
-            padding-left: 1px;
-            width: auto;
+      }
+      .searchContainer {
+        display: grid;
+        grid-template-columns: 1.5rem 4fr 1fr;
+        width: 220px;
+        height: 26px;
+        border: 1px solid #dbdbdb;
+        border-radius: 3px;
+        overflow: hidden;
+        background-color: #fafafa;
+        flex-shrink: 5;
+        margin-right: 80px;
+        i {
+          color: #dbdbdb;
+          grid-row: 1;
+          grid-column: 1/2;
+          z-index: 2;
+          padding-left: 87px;
+          padding-top: 10px;
+          font-size: 12px;
+          flex-shrink: 3;
         }
-        #searchId {
-          display: none;
+        input {
+          border: 0;
+          padding: 0.5rem;
+          grid-column: 2/4;
+          grid-row: 1;
+          outline: none;
+          background-color: #fafafa;
+          flex-shrink: 3;
         }
-        #logoId {
-            padding-left: 0px;
-            padding-right:0px;
-    
+        ::placeholder {
+          color: #dbdbdb;
+          padding-left: 72px;
         }
-        #iconSecId {
-            align-items: flex-end;
+      }
+      .searchContainer:focus-within i {
+        display: none;
+      }
+      .searchContainer:focus-within .searchInput {
+        grid-column: 1/4;
+      }
+      .searchContainer:focus-within .searchBox::placeholder {
+        color: transparent;
+      }
+      .iconSec {
+        padding-left: 140px;
+        display: flex;
+        font-size: 24px;
+        flex-shrink: 5;
+        i {
+          padding-left: 9px;
+          padding-right: 9px;
         }
-        #icon1, #icon2, #icon3, #icon4, #icon5 {
-            padding-left: 1px; padding-right: 1px;
+        .navBarProfImg {
+          padding-left: 8px;
+          border-radius: 100%;
+          width: 25px;
+          height: 25px;
+          img {
+            max-width: 100%;
+            max-height: 100%;
+            padding-bottom: 1px;
+          }
         }
+      }
     }
-    .searchContainer:focus-within i {
-      display: none;
-    }
-    .searchContainer:focus-within .searchInput {
-      grid-column: 1/4;
-    }
-    .searchContainer:focus-within .searchBox::placeholder {
-      color: transparent;
-    }
-    .searchIcon {
-      color: #dbdbdb;
-      grid-row: 1;
-      grid-column: 1/2;
-      z-index: 2;
-      padding-left: 87px;
-      padding-top: 10px;
-      font-size: 12px;
-      flex-shrink: 3;
-    }
-    .searchInput {
-      border: 0;
-      padding: 0.5rem;
-      grid-column: 2/4;
-      grid-row: 1;
-      outline: none;
-      background-color: #fafafa;
-      flex-shrink: 3;
-    }
-    ::placeholder {
-      color: #dbdbdb;
-      padding-left: 72px;
-    }  
-    .iconSec {
-      padding-left: 140px;
-      display: flex;
-      font-size: 24px;
-      flex-shrink: 5; 
-    }
-    .iconSec i {
-      padding-left: 9px;
-      padding-right: 9px;
-    }
-    .navBarProfImg{
-        padding-left: 8px;
-        border-radius: 100%;
-        width:25px;
-        height:25px;
-    }
-    .navBarProfDisplay{
-        max-width:100%;
-        max-height:100%;
-        padding-bottom:1px;
-    } 
-    /* this is main page CSS*/
-    .mainWrap {
-      margin-top: 40px;
-      background-color: #fafafa;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding-right:30px;
-    }
+  }
+  .mainWrap {
+    margin-top: 40px;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 30px;
     .thisMain {
       padding-top: 40px;
       display: flex;
-    }
-    
-    .mainMidSec {
-      padding-left:23.6%; 
-      display: flex;
-      flex-direction: column;
-      width: 655px;
-    }
-
-    @media (min-width: 300px) and (max-width: 1000px) {#mainRightSecId {display: none;right:1%;}}
-    @media  (max-width: 1870px) {#mainRightSecId {right:22%;}}
-    @media (max-width: 1760px) {#mainRightSecId {right:18%;}}
-    @media (max-width: 1641px) {#mainRightSecId {right:15%;}}
-    @media (max-width: 1560px) {#mainRightSecId {right:12%;}}
-    @media (max-width: 1482px) {#mainRightSecId {right:8%;}}
-    @media (max-width: 1400px) {#mainRightSecId {right:5%;}}
-    @media (max-width: 1340px) {
-        #mainRightSecId {right:2%;}
-        #midSecId {width:620px;}} 
-    @media (min-width: 300px) and (max-width: 1247px) {
-        #midSecId {width:620px;padding-left:21%;}}
-    @media (min-width: 300px) and (max-width: 1210px) {
-        #midSecId {padding-left:17%;}}
-    @media (max-width: 1151px) {#mainRightSecId {right:0%;}
-    #midSecId {padding-left:14%;}}
-    @media (max-width: 1085px) {#mainRightSecId {right:-2%;}
-    #midSecId {padding-left:11%;}}
-    @media (max-width: 1045px) {#mainRightSecId {right:-5%;}}
-    @media (max-width: 1012px) {#mainRightSecId {right:-8%;}} 
-    
-    .mainRightSec {
-      position: fixed;
-      display: flex;
-      flex-direction: column;
-      right: 25%;
-      width:295px;
-      margin-left: 1px;
-    }
-    .rightFeed1 {
-      display: flex;
-      align-items: center;
-      width: 96%;
-      height: 100px;
-      padding-left: 10px;
-    }
-    .userProfilePic {}
-    .userProfile{
-        display:flex;
-        flex-direction: column;
-        padding-left:  18px;
-        padding-right: 85px;
-    }
-    .userId{
-        font-size: 14px;
-        font-weight:600;
-    }
-    .rightUserName{
-        color:#919191;
-        font-size: 16px;
-    }
-    .switchBtn{
-        color:#27a1f6;
-        font-weight: bold;
-        font-size:12px;
-    }
-    
-    .rightFeed2 {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: 318px;
-    }
-    .rightFeed2Head {
-        display:flex;
-        justify-content: space-between;
-        padding-right: 1px;
-        padding-bottom: 5px;  
-    }
-    #rf2H1{
-        font-size: 14px;
-        color: #8e8e8e;
-        font-weight: 600;
-    }
-    #rf2H2{
-        padding-top:1px;
-        font-size: 12px;
-        font-weight: 600;
-    }
-    .addFriend {
-        display:flex; 
-        padding-left: 5px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin-right: -20px;
-    }
-    .friendProfilePic {
-        padding-top: 7px;
-        padding-left: 5px;
-        border-radius: 100%;
-        width:36px;
-        height:36px;
-    }
-    .fpClass {
-        max-width:100%;
-        max-height: 100%;
-    }
-    .friendProfile{
-        display:flex;
-        width: 190px;
-        flex-direction: column;
-        padding-top: 7px;
-        padding-left:  13px;
-        padding-right: 5px;
-    }
-    .friendId{
-        font-size: 15px;
-        font-weight:600;
-    }
-    .friendDesc{
-        color:#919191;
-        font-size: 12px;
-    }
-    .followFrdBtn{
-
-        color:#27a1f6;
-        font-weight: bold;
-        font-size:12px;
-        padding-top: 14px;
-    }  
-    .rightFeed3 {
-      padding-top: 20px;
-      display: flex;
-      color:#cccccc;
-      width: 100%;
-      height: 14px;
-    }
-    .rightFeed4 {
-        padding-top: 2px;
-        color:#cccccc;
+      .mainMidSec {
+        padding-left: 23.6%;
         display: flex;
-        width: 100%;
-        height: 30px;
+        flex-direction: column;
+        width: 655px;
       }
-    .rightFeed5{
-        display:flex;
-        color:#cccccc;
-        /* border: 1px solid red; */
-        width: 100%;
-        height: 30px;
+      .mainRightSec {
+        display: flex;
+        flex-direction: column;
+        right: 25%;
+        width: 310px;
+        margin-left: 1%;
+        .fixedDiv {
+          position: fixed;
+          .rightFeed1 {
+            display: flex;
+            align-items: center;
+            width: 96%;
+            height: 100px;
+            padding-left: 10px;
+            .userProfile {
+              display: flex;
+              flex-direction: column;
+              padding-left: 18px;
+              margin-right: 80px;
+              .userId {
+                font-size: 14px;
+                font-weight: 600;
+              }
+              .rightUserName {
+                color: #919191;
+                font-size: 16px;
+              }
+            }
+            .switchBtn {
+              color: #27a1f6;
+              font-weight: bold;
+              font-size: 12px;
+              // margin-right:10px;
+              width:50px;
+            }
+          }
+          .rightFeed2 {
+            display: flex;
+            flex-direction: column;
+            // width: auto;
+            height: 318px;
+            .rightFeed2Head {
+              display: flex;
+              // justify-content: space-between;
+              padding-right: 1px;
+              padding-bottom: 5px;
+              #rf2H1 {
+                padding-right: 43%;
+                font-size: 14px;
+                color: #8e8e8e;
+                font-weight: 600;
+              }
+              #rf2H2 {
+                padding-top: 1px;
+                font-size: 12px;
+                font-weight: 600;
+              }
+            }
+            .addFriend {
+              display: flex;
+              padding-left: 5px;
+              padding-top: 5px;
+              padding-bottom: 5px;
+              margin-right: -20px;
+              .friendProfilePic {
+                padding-top: 7px;
+                padding-left: 5px;
+                border-radius: 100%;
+                width: 36px;
+                height: 36px;
+                img {
+                  max-width: 100%;
+                  max-height: 100%;
+                }
+              }
+              .friendProfile {
+                display: flex;
+                width: 190px;
+                flex-direction: column;
+                padding-top: 7px;
+                padding-left: 13px;
+                padding-right: 5px;
+                .friendId {
+                  font-size: 15px;
+                  font-weight: 600;
+                }
+                .friendDesc {
+                  color: #919191;
+                  font-size: 12px;
+                }
+              }
+              .followFrdBtn {
+                color: #27a1f6;
+                font-weight: bold;
+                font-size: 12px;
+                padding-top: 14px;
+              }
+            }
+          }
+          .rightFeed3 {
+            padding-top: 10px;
+            display: flex;
+            color: #cccccc;
+            width: 100%;
+            height: 14px;
+            a {
+              font-weight: 350;
+              font-size: 11px;
+              margin: 1px 1px;
+            }
+          }
+          .rightFeed4 {
+            padding-top: 2px;
+            color: #cccccc;
+            display: flex;
+            width: 100%;
+            height: 30px;
+            a {
+              font-weight: 350;
+              font-size: 11px;
+              margin: 1px 1px;
+            }
+          }
+          .rightFeed5 {
+            display: flex;
+            color: #cccccc;
+            /* border: 1px solid red; */
+            width: 100%;
+            height: 30px;
+            a {
+              font-size: 11.5px;
+            }
+          }
+        }
+      }
     }
-    .rightFeed5 a {
-        font-size:11.5px;
-    } 
-    .extraPad4 {
-      height: 33px;
-    }
-    .rightFooterElement { 
-        font-weight:350;
-        font-size: 10px;
-        margin: 1px 1px;
-    }
+  }
+}
+
+// .extraPad4 {
+//   height: 33px;
+// }
+

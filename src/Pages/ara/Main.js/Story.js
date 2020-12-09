@@ -48,7 +48,7 @@ class Story extends React.Component {
             return (
               <div className="storyWrap">
                 <div className="storyElement">
-                  <img className="storyPic" src={el.imageURL} />
+                  <img src={el.imageURL} />
                 </div>
                 <div className="storyUserName">{el.userName}</div>
               </div>

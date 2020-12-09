@@ -1,124 +1,123 @@
 .Feed {
-    display: flex;
-    flex-direction:column;
-    border-left: 0.5px solid lightgrey;
-    border-right: 0.5px solid lightgrey;
-    border-top: 0.5px solid lightgrey;
-    width: 100%;
-    height: 100%;
-    margin-right: 1%;
-    margin-bottom:30px;
-  }
+  display: flex;
+  flex-direction: column;
+  border-left: 0.5px solid lightgrey;
+  border-right: 0.5px solid lightgrey;
+  border-top: 0.5px solid lightgrey;
+  width: 100%;
+  // height: 100%;
+  margin-right: 1%;
+  margin-bottom: 30px;
   .mFdTop {
-      display: flex;
-      height: 33px;
-      padding: 15px;
-  }
-  .postUserPic {
+    display: flex;
+    height: 33px;
+    padding: 15px;
+    .postUserPic {
       border-radius: 100%;
-      width:35px;
-      height:35px;
-  }
-  .postUPDisplay{
-      max-width:100%;
-      max-height:100%;
-      padding-bottom:1px;
-  }
-  .postInfo {
-      display: flex;
-      flex-direction: column;
-      padding-left:10px;
-      margin-right: 72%;
-  }
-  .postedUser{
-      font-size: 14.5px;
-      font-weight: bold;
-  }
-  .postedLocation {
-      padding-top:3px;
-      font-size: 12px;
-  }
-  .postedPicMenu {
-      display:flex;
-      align-items: center;
-      right: 0%;
-  }
-  .postedPicMenu i {
-      font-size: 13px;
+      width: 35px;
+      height: 35px;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        padding-bottom: 1px;
+      }
+    }
+    .postInfo {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        margin-right: 72%;
+        .postedUser {
+            font-size: 14.5px;
+            font-weight: bold;
+          }
+          .postedLocation {
+            padding-top: 3px;
+            font-size: 12px;
+          }
+      }
+      .postedPicMenu {
+        display: flex;
+        align-items: center;
+        right: 0%;
+        i{
+            font-size: 13px;
+        }
+      }
   }
   .mFdPic {
-      display:flex;
-      width:100%;
-      height:606px;
-  }
-  .mFdPic img {
-      max-width:100%;
-      max-height:100%;
+    display: flex;
+    width: 100%;
+    height: 606px;
+    img{
+        max-width: 100%;
+        max-height: 100%;
+    }
   }
   .mFdLikeSec {
-      display:flex;
-      height: 20px;
-      width:100%;
-      padding: 8px;
-      margin-left: 8px;
-      margin-top: 2px;
-      margin-bottom: 3px;
-      font-size: 20px;
-  }
-  .mFdLkIcon1 {
-      display:flex;
-      width: 5%;
-  }
-  .mFdLkIcon2 {
-      display:flex;
-      width: 5%
-  }
-  .mFdLkIcon3 {
-      display:flex;
-      width: 38%
-  }
-  .mFdLkIcon4 {
-      display:flex;
-      width: 46%
-  }
-  .mFdLkIcon5 {
-      display:flex;
+    display: flex;
+    height: 20px;
+    width: 100%;
+    padding: 8px;
+    margin-left: 8px;
+    margin-top: 2px;
+    margin-bottom: 3px;
+    font-size: 20px;
+    .mFdLkIcon1 {
+        display: flex;
+        width: 5%;
+      }
+      .mFdLkIcon2 {
+        display: flex;
+        width: 5%;
+      }
+      .mFdLkIcon3 {
+        display: flex;
+        width: 38%;
+      }
+      .mFdLkIcon4 {
+        display: flex;
+        width: 46%;
+      }
+      .mFdLkIcon5 {
+        display: flex;
+      }
   }
   .mFdPplLiked {
-      display:flex;
-      width:100%;
-      font-weight:550;
-      font-size: 15px;
-      padding-left: 13px;
-      padding-bottom: 6px;
+    display: flex;
+    width: 100%;
+    font-weight: 550;
+    font-size: 15px;
+    padding-left: 13px;
+    padding-bottom: 6px;
   }
   .mFdContent1 {
-      display:flex;
-      width:100%;
-      font-weight: 550;
-      padding-left: 13px;
-      font-size: 14px;
-      padding-bottom: 4px;
+    display: flex;
+    width: 100%;
+    font-weight: 550;
+    padding-left: 13px;
+    font-size: 14px;
+    padding-bottom: 4px;
   }
   .mFdContent2 {
-      display: flex;
-      font-weight: 400;
+    display: flex;
+    font-weight: 400;
   }
   .mFdComment {
-      display:flex;
-      position: relative;
-      width:100%;
-      font-weight: 550;
-      padding-left: 13px;
-      font-size: 14px;
-    //   padding-bottom: 1px; 
+    display: flex;
+    position: relative;
+    width: 100%;
+    font-weight: 550;
+    padding-left: 13px;
+    font-size: 14px;
+    //   padding-bottom: 1px;
     i {
-        position: absolute;
-        margin-top: 3px;
-        right: 3%;
+      position: absolute;
+      margin-top: 3px;
+      right: 3%;
     }
   }
   .mFdComment .mFdContent2 {
-      margin-right: 64%;
+    margin-right: 64%;
   }
-  
+}

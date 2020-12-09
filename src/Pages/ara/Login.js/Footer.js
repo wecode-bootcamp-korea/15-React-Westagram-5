@@ -31,7 +31,7 @@ class Footer extends React.Component {
     return (
       <>
         <footer className="Footer">
-          <div className="footer1">
+          <div className="footerBlock">
             <Link to="/main" className="footElement">
               소개
             </Link>
@@ -39,12 +39,12 @@ class Footer extends React.Component {
               return <a className="footElement">{el.title}</a>;
             })}
           </div>
-          <div className="footer2">
+          <div className="footerBlock">
             {FOOTCATEGORY2.map((el) => {
               return <a className="footElement">{el.title}</a>;
             })}
           </div>
-          <div className="footer3">
+          <div className="footerBlock">
             <a className="classB">English © 2020 Weestagram from Wecode</a>
           </div>
         </footer>

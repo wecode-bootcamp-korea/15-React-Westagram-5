@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import "./common.scss";
+import "./reset.scss";
 import Login from "./Pages/ara/Login.js/Login";
 import Main from "./Pages/ara/Main.js/Main";
 import Routes from "./Routes.js";

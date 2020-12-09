@@ -1,0 +1,61 @@
+$MainColor: linear-gradient(90deg, #755bea, #ff72c0);
+$MainShadow: 0 5px 8px #414141;
+
+@mixin display {
+  display: flex;
+  align-items: center;
+}
+
+@mixin InputSetting {
+  height: 70%;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #fff;
+  font-size: 18px;
+  border-radius: 40px;
+  padding: 0 60px 0 20px;
+}
+
+nav {
+  margin: 0 auto;
+  @include display();
+  width: 100%;
+  justify-content: space-evenly;
+  height: 70px;
+  box-shadow: $MainShadow;
+  border-bottom: 1px solid #999999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-image: $MainColor;
+  img {
+    max-width: 35px;
+  }
+  .logo {
+    @include display();
+    cursor: pointer;
+  }
+  .logo h2 {
+    font-size: 26px;
+    font-family: "Lobster", cursive;
+    cursor: pointer;
+  }
+  .search__bar {
+    height: 60px;
+    width: 60px;
+    position: relative;
+    transition: 0.4s;
+    top: 10px;
+    cursor: pointer;
+
+    &.active {
+      transition: all 0.2s ease-in-out;
+      width: 250px;
+    }
+    .searh__input {
+      @include InputSetting;
+    }
+  }
+}

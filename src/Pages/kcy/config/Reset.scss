@@ -1,0 +1,32 @@
+*,
+i,
+span,
+div,
+nav,
+main,
+section,
+img,
+input {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}

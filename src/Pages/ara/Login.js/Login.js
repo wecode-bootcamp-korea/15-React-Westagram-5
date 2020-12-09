@@ -15,10 +15,8 @@ class Login extends React.Component {
       hiddenPW: true,
       btnColor: true,
       btnStatus: true,
-
       testEmail: "1@test.com",
       samplePw: "111111",
-
       productList: [],
     };
   }
@@ -97,7 +95,6 @@ class Login extends React.Component {
 
   render() {
     const { id, pw, hiddenPW, btnColor } = this.state;
-
     return (
       <>
         <div className="Login">

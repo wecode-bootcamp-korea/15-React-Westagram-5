@@ -45,11 +45,10 @@ class Main extends React.Component {
   render() {
     return (
       <>
-        <section id="allSectionId" className="allSection">
+        <section id="allSectionId" className="Main">
           <div id="navWrapId" className="navWrap">
             <nav className="navSec">
               <div id="logoId" className="logo">
-                {/* <div style="font-family:Lobster, seif;"> */}
                 <div className="logoTitle">Weestagram</div>
               </div>
               <div id="searchId" className="searchContainer">
@@ -115,7 +114,6 @@ class Main extends React.Component {
                       })}
                     </div>
                   </div>
-
                   <div className="rightFeed3">
                     <a className>소개 &#183;</a>
                     <a className> 도움말 &#183;</a>

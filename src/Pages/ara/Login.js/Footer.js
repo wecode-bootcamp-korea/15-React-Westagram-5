@@ -24,9 +24,6 @@ const FOOTCATEGORY2 = [
   { id: 6, title: "시각 예술" },
 ];
 class Footer extends React.Component {
-  // constructor() {
-  //     super();
-  // }
   render() {
     return (
       <>

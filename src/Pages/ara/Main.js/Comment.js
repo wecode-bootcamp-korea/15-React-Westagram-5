@@ -33,13 +33,11 @@ class Comment extends React.Component {
         </div>
       );
     });
-    console.log(this.state.commentInput.commentContainer);
     return (
       <>
         <div className="Comment">
           <div>{taskDisplay}</div>
           <div className="mFdDate">{this.props.postedDate}</div>
-          {/* <div className="mFdDate">2 days ago</div> */}
           <div className="mFdCmtIpt">
             <input
               value={this.state.commentInput}

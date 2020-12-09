@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../config/MainRight.scss";
 class MainRight extends React.Component {
   constructor(props) {
     super(props);

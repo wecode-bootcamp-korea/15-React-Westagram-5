@@ -1,6 +1,7 @@
 import React from "react";
 import feedHeaderData from "./Data/FeedHeaderData";
 import Comment from "./Comment";
+import "../config/Feed.scss";
 class Feed extends React.Component {
   constructor(props) {
     super(props);

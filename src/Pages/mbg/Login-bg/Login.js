@@ -13,21 +13,17 @@ class Login extends Component {
             password: ""
         };
     }
-
     handleValueInput = (e) => {
       const {id, value} = e.target;
       this.setState({
         [id] : value,
         })
-        console.log(id,value)
-      }
-
-    showPassword = (e) => {
+     }
+    showPassword = () => {
         this.setState({
         hiddenPw: !this.state.hiddenPw,
         })
     }
-    
     checkValue = (e) => {
         e.preventDefault();
         const { id, password } = this.state;
@@ -43,7 +39,6 @@ class Login extends Component {
         if (!checkPw) {
             alert("비밀번호는 5자리 이상이여야 합니다.")
         }
-    
     };
 
     handleClick = () => {
@@ -63,11 +58,11 @@ class Login extends Component {
           this.checkValue();
         }
       }
-    
 
     render() {
       const {id, password, hiddenPw} = this.state;
       const activateBtn = (id.length && password.length) > 0;
+      
         return (
             <div className="outline">
                 <div className="login_cover_img flex_center">
@@ -87,7 +82,7 @@ class Login extends Component {
                                            placeholder="전화번호, 사용자 이름 또는 이메일"
                                            onfocus="this.placeholder=''"
                                            onChange={this.handleValueInput} 
-                                        //    onKeyPress={this.loginEnter}
+                                           onKeyPress={this.loginEnter}
                                            value={id}
                                           />
                                 </div>
@@ -134,9 +129,9 @@ class Login extends Component {
                                     <button 
                                      id="signUp"
                                      onClick={this.handleClick}
+                                     placeholder="가입하기"
                                      />
-                                    <a href="https://www.instagram.com/" style={{ color: "#0095f6" }}> 가입하기</a>
-                                    </div>
+                                </div>
                             </div>
                             <div className="app_down_form">
                                 앱으로 다운로드하세요

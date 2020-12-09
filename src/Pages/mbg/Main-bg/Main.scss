@@ -10,6 +10,18 @@ a {
   background-color: unset;
 }
 
+ul {
+  list-style: none;
+  height: 20px;
+  width: auto;
+}
+
+#signUp {
+  width: 30px;
+  height: 20px;
+  background-color: brown;
+}
+
 .barOutline {
   display: flex;
   justify-content: center;
@@ -327,15 +339,15 @@ button {
 
 .textBar {
   width: 582px;
-  height: 88px;
+  height: 100px;
   padding: 0 16px;
   color: #262626;
   font-size: 14px;
 }
 
-ul {
-  padding: 0;
-  margin: 0;
+.replyBar {
+  height: auto;
+  background-color: brown;
 }
 
 .writersComment {

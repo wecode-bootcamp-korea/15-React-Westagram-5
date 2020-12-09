@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./Login.scss";
 import { Link } from 'react-router-dom';
 
+const API = "http://3.35.19.3:8000/account/signup";
 
 class Login extends Component {
 
@@ -27,7 +28,6 @@ class Login extends Component {
         })
     }
     
-
     checkValue = (e) => {
         e.preventDefault();
         const { id, password } = this.state;
@@ -43,20 +43,40 @@ class Login extends Component {
         if (!checkPw) {
             alert("비밀번호는 5자리 이상이여야 합니다.")
         }
+    
     };
-  
+
+    handleClick = () => {
+        fetch(API, {
+            method: "POST",
+            body: JSON.stringify({
+              email: this.state.id,
+              password: this.state.password,
+            }),
+        }) 
+        .then(response =>response.json())
+        .then(result => console.log(result));
+    };
+      
+    loginEnter = (e) => {
+        if(e.key === "Enter"){
+          this.checkValue();
+        }
+      }
+    
+
     render() {
       const {id, password, hiddenPw} = this.state;
       const activateBtn = (id.length && password.length) > 0;
         return (
             <div className="outline">
                 <div className="login_cover_img flex_center">
-                    <img src="./images/1.jpg" class="chang_img" alt="로그인로고" />
+                    <img src="./images/mbg/1.jpg" class="chang_img" alt="로그인로고" />
                 </div>
                 <div className="flex_center">
                     <div className="loginOutline">
                         <div className="login_form">
-                            <img className="logo_img" src="./images/logo_text.png" alt="로고 이미지" />
+                            <img className="logo_img" src="./images/mbg/logo_text.png" alt="로고 이미지" />
                             <div className="flex_center login_data_form">
                                 <div className="id_form in_txt_box">
                                     <span className="helper"></span>
@@ -67,6 +87,7 @@ class Login extends Component {
                                            placeholder="전화번호, 사용자 이름 또는 이메일"
                                            onfocus="this.placeholder=''"
                                            onChange={this.handleValueInput} 
+                                        //    onKeyPress={this.loginEnter}
                                            value={id}
                                           />
                                 </div>
@@ -79,16 +100,18 @@ class Login extends Component {
                                            placeholder="비밀번호"
                                            onfocus="this.placeholder=''"
                                            onChange={this.handleValueInput} 
+                                           onKeyPress={this.loginEnter}
                                            value={password}
                                            />
-                                    <span className="showPw" onClick={this.showPassword}>
-                                        {hiddenPw? "show" : "hide"}
+                                    <span className="showPw" 
+                                          onClick={this.showPassword}>
+                                          {hiddenPw? "show" : "hide"}
                                     </span>
                                 </div>
                                 <div className="login_btn_cover">
                                     <button id="login_btn"
                                             className={activateBtn ? "active" : ""}
-                                            onClick={this.checkValue}>                                         
+                                            onClick={this.checkValue}>  
                                         <Link to="/Main">로그인</Link>
                                     </button>
                                 </div>
@@ -108,6 +131,10 @@ class Login extends Component {
                             </div>
                             <div className="sign_form flex_center">
                                 <div>계정이 없으신가요? 
+                                    <button 
+                                     id="signUp"
+                                     onClick={this.handleClick}
+                                     />
                                     <a href="https://www.instagram.com/" style={{ color: "#0095f6" }}> 가입하기</a>
                                     </div>
                             </div>

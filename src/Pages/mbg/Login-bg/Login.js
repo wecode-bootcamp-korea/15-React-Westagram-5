@@ -121,33 +121,29 @@ class Login extends Component {
                 <div className="txt_line"></div>
               </div>
               <div className="other_login flex_center">
-                <div>
-                  <span>Facebook으로 로그인</span>
-                </div>
+                <div>Facebook으로 로그인</div>
                 <span className="search_pwd">비밀번호를 잊으셨나요?</span>
               </div>
-              <div className="sign_form flex_center">
-                <div>
-                  계정이 없으신가요?
-                  <button
-                    id="signUp"
-                    onClick={this.handleClick}
-                    placeholder="가입하기"
-                  />
-                </div>
+            </div>
+            <div className="sign_form flex_center">
+              <div>
+                계정이 없으신가요?
+                <button id="signUp" onClick={this.handleClick}>
+                  가입하기
+                </button>
               </div>
-              <div className="app_down_form">
-                앱으로 다운로드하세요
-                <div>
-                  <img
-                    src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_korean-ko.png/4a5c9d62d51b.png"
-                    alt="ios"
-                  />
-                  <img
-                    src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_korean-ko.png/f155b664a93b.png"
-                    alt="앱스토어"
-                  />
-                </div>
+            </div>
+            <div className="app_down_form">
+              앱으로 다운로드하세요
+              <div>
+                <img
+                  src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_korean-ko.png/4a5c9d62d51b.png"
+                  alt="ios"
+                />
+                <img
+                  src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_korean-ko.png/f155b664a93b.png"
+                  alt="앱스토어"
+                />
               </div>
             </div>
           </div>

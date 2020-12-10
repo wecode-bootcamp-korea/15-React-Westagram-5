@@ -12,8 +12,8 @@ a {
 
 ul {
   list-style: none;
-  height: auto;
   width: auto;
+  background-color: brown;
 }
 
 li {
@@ -337,14 +337,9 @@ button {
 
 .textBar {
   width: 582px;
-  height: 200px;
+  height: auto;
   padding: 0 16px;
   font-size: 14px;
-}
-
-.replyBar {
-  height: auto;
-  background-color: brown;
 }
 
 .writersComment {

@@ -9,32 +9,29 @@ class Comment extends React.Component {
     };
   }
 
-  onClickHandle = () => {
+  onClickLikeButton = () => {
     this.setState({
       clicked: !this.state.clicked,
     });
   };
 
   render() {
-    const { comment, removeClick } = this.props;
+    const { comment, removeComment, id } = this.props;
     const { clicked } = this.state;
-    const { onClickHandle } = this;
+    const { onClickLikeButton } = this;
 
     return (
       <>
-        <li id={comment.id} className="Comment">
+        <li id={id} className="Comment">
           <span className="comment-list-nickname">{comment.nickname}</span>
           <span>{comment.text}</span>
-          <button
-            className="delete-button"
-            onClick={() => removeClick(comment.id)}
-          >
+          <button className="delete-button" onClick={() => removeComment(id)}>
             ...
           </button>
           <i
-            className={(clicked ? "fas" : "far") + " fa-heart like-button"}
-            onClick={onClickHandle}
-          ></i>
+            className={`${clicked ? "fas" : "far"} fa-heart like-button`}
+            onClick={onClickLikeButton}
+          />
         </li>
       </>
     );

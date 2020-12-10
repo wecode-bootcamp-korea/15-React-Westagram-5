@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "nickname": "wiinnerb",
+      "imageUrl": "./images/hth/friends1.jpg",
+      "alt": "wiinnerb"
+    },
+    {
+      "id": 1,
+      "nickname": "joooniboy",
+      "imageUrl": "./images/hth/friends2.jpg",
+      "alt": "joooniboy"
+    },
+    {
+      "id": 2,
+      "nickname": "kingth_man",
+      "imageUrl": "./images/hth/my_profile.jpg",
+      "alt": "kingth_man"
+    },
+    {
+      "id": 3,
+      "nickname": "chaehoon.p",
+      "imageUrl": "./images/hth/friends3.jpg",
+      "alt": "chaehoon.p"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-.Article {
+.ArticleSection {
   border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
   background-color: white;
 
@@ -7,7 +7,7 @@
     padding: 14px 0;
     display: flex;
 
-    .header-image {
+    img {
       width: 32px;
       height: 32px;
       margin: 0 20px;
@@ -34,7 +34,7 @@
       justify-content: space-between;
       padding: 10px 15px 10px 5px;
 
-      .comment-header-icon {
+      img {
         width: 24px;
         height: 24px;
         margin-left: 10px;
@@ -52,7 +52,7 @@
     }
 
     .comment-list {
-      margin: 15px 15px;
+      margin: 15px;
       font-size: 14px;
     }
 

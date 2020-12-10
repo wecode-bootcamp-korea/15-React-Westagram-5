@@ -15,16 +15,14 @@ class MainHTH extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/data/hth/data.json", {
-      method: "GET",
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        this.setState({
-          users: res.users,
-        });
-      });
+    this.getUserData();
   }
+
+  getUserData = () => {
+    fetch("/data/hth/userData.json")
+      .then((res) => res.json())
+      .then(({ users }) => this.setState({ users }));
+  };
 
   searchOnChangeHandle = (event) => {
     this.setState(
@@ -32,18 +30,19 @@ class MainHTH extends React.Component {
         searchText: event.target.value,
       },
       () => {
-        this.searchViewRender(this.state.searchText);
+        this.searchViewRender();
       }
     );
   };
 
-  searchViewRender = (text) => {
-    if (text) {
+  searchViewRender = () => {
+    const { searchText } = this.state;
+    if (searchText) {
       const result = this.state.users.filter((user) => {
-        return user.nickname.includes(text);
+        return user.nickname.includes(searchText);
       });
       this.setState({
-        searchResult: [...result],
+        searchResult: result,
       });
     }
   };
@@ -79,7 +78,12 @@ class MainHTH extends React.Component {
                 placeholder="검색"
                 onChange={searchOnChangeHandle}
               />
-              <div className={"search-list " + (searchText ? "" : "hidden")}>
+              <div
+                className={
+                  "search-list " +
+                  (searchText && searchResult.length > 0 ? "" : "hidden")
+                }
+              >
                 <ul>
                   {searchResult.map((user) => (
                     <SearchView key={user.id} id={user.id} user={user} />

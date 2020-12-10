@@ -1,8 +1,8 @@
 import React from "react";
-import "./Article.scss";
 import Comment from "./Components/Comment/Comment";
+import "./ArticleSection.scss";
 
-class Article extends React.Component {
+class ArticleSection extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -13,18 +13,16 @@ class Article extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/data/hth/data.json", {
-      method: "GET",
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        this.setState({
-          comments: res.comments,
-        });
-      });
+    this.getCommentData();
   }
 
-  removeOnClick = (id) => {
+  getCommentData = () => {
+    fetch("/data/hth/commentData.json")
+      .then((res) => res.json())
+      .then(({ comments }) => this.setState({ comments }));
+  };
+
+  removeComment = (id) => {
     if (window.confirm("삭제 하시겠습니까?")) {
       this.setState({
         comments: this.state.comments.filter((comment, index) => {
@@ -34,13 +32,13 @@ class Article extends React.Component {
     }
   };
 
-  onKeyPressHandle = (event) => {
+  addCommentPressEnter = (event) => {
     if (event.key === "Enter") {
-      if (this.state.inputValue) this.onClickHandle();
+      if (this.state.inputValue) this.addComment();
     }
   };
 
-  onClickHandle = () => {
+  addComment = () => {
     const { comments, nickname, inputValue } = this.state;
 
     this.setState({
@@ -48,7 +46,6 @@ class Article extends React.Component {
       comments: [
         ...comments,
         {
-          id: comments.length,
           nickname: nickname,
           text: inputValue,
         },
@@ -62,29 +59,20 @@ class Article extends React.Component {
     });
   };
 
-  validationCheck = () => {
-    return this.state.inputValue ? false : true;
-  };
-
   render() {
     const {
-      onKeyPressHandle,
-      onClickHandle,
+      addCommentPressEnter,
+      addComment,
       onChangeHandle,
-      validationCheck,
-      removeOnClick,
+      removeComment,
     } = this;
     const { inputValue, comments } = this.state;
-    const inputCheck = validationCheck();
+    const inputCheck = !this.state.inputValue;
 
     return (
-      <article className="Article">
+      <article className="ArticleSection">
         <div className="article-header">
-          <img
-            className="header-image"
-            src="./images/hth/ash_profile.jpg"
-            alt="article-profile-img"
-          />
+          <img src="./images/hth/ash_profile.jpg" alt="article-profile-img" />
           <div className="header-nickname">ash.island</div>
         </div>
         <div className="article-main">
@@ -93,27 +81,11 @@ class Article extends React.Component {
         <div className="comment-box">
           <div className="comment-header">
             <div className="left-icon">
-              <img
-                className="comment-header-icon"
-                src="./images/hth/heart.png"
-                alt="heart-icon"
-              />
-              <img
-                className="comment-header-icon"
-                src="./images/hth/chat.png"
-                alt="chat-icon"
-              />
-              <img
-                className="comment-header-icon"
-                src="./images/hth/upload.png"
-                alt="upload-icon"
-              />
+              <img src="./images/hth/heart.png" alt="heart-icon" />
+              <img src="./images/hth/chat.png" alt="chat-icon" />
+              <img src="./images/hth/upload.png" alt="upload-icon" />
             </div>
-            <img
-              className="comment-header-icon"
-              src="./images/hth/bookmark.png"
-              alt="bookmark-icon"
-            />
+            <img src="./images/hth/bookmark.png" alt="bookmark-icon" />
           </div>
           <div className="comment-like">
             <span className="like-nickname">kingth_man</span>님 외 4명이
@@ -121,11 +93,12 @@ class Article extends React.Component {
           </div>
           <div className="comment-list">
             <ul>
-              {comments.map((comment) => (
+              {comments.map((comment, index) => (
                 <Comment
-                  key={comment.id}
+                  key={index}
+                  id={index}
                   comment={comment}
-                  removeClick={removeOnClick}
+                  removeComment={removeComment}
                 />
               ))}
             </ul>
@@ -136,11 +109,11 @@ class Article extends React.Component {
               placeholder="댓글 달기..."
               type="text"
               onChange={onChangeHandle}
-              onKeyPress={onKeyPressHandle}
+              onKeyPress={addCommentPressEnter}
               value={inputValue}
             />
             <button
-              onClick={onClickHandle}
+              onClick={addComment}
               disabled={inputCheck}
               className={"input-button " + (inputCheck ? "" : "active-button")}
             >
@@ -153,4 +126,4 @@ class Article extends React.Component {
   }
 }
 
-export default Article;
+export default ArticleSection;

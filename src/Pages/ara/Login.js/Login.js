@@ -1,12 +1,12 @@
 import React from "react";
 import "./Login.scss";
 import Footer from "./Footer.js";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 
 const API = "http://3.35.19.3:8000/account/signin";
 
-class Login extends React.Component {
+class LoginAram extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -84,7 +84,7 @@ class Login extends React.Component {
     const { id, pw, testEmail, samplePw } = this.state;
     if (id == testEmail && pw == samplePw && id.includes("@")) {
       alert("successful");
-      this.props.history.push("/main");
+      this.props.history.push("/main-aram");
     } else {
       alert("not valid email or wrong password ");
     }
@@ -211,6 +211,6 @@ class Login extends React.Component {
     );
   }
 }
-export default withRouter(Login);
+export default LoginAram;
 
 // 최상단 tag 클레스네임은 이 컴포터는이름과 동일하게하기

@@ -6,7 +6,7 @@ import { withRouter } from "react-router-dom";
 
 const API = "http://3.35.19.3:8000/account/signin";
 
-class LoginAram extends React.Component {
+class LoginAra extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -211,6 +211,6 @@ class LoginAram extends React.Component {
     );
   }
 }
-export default LoginAram;
+export default LoginAra;
 
 // 최상단 tag 클레스네임은 이 컴포터는이름과 동일하게하기

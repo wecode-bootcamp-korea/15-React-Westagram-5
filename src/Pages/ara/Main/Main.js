@@ -41,7 +41,7 @@ const ADDFRIENDINFO = [
   },
 ];
 
-class MainAram extends React.Component {
+class MainAra extends React.Component {
   render() {
     return (
       <>
@@ -141,4 +141,4 @@ class MainAram extends React.Component {
     );
   }
 }
-export default MainAram;
+export default MainAra;

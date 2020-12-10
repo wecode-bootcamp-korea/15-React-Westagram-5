@@ -1,0 +1,289 @@
+
+.Main {
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .navWrap {
+    width: 100%;
+    top: 0;
+    display: flex;
+    background-color: white;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgrey;
+    flex-shrink: 5;
+    .navSec {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 10px;
+      flex-shrink: 5;
+      .logo {
+        display: flex;
+        font-size: 22px;
+        padding-right: 240px;
+        flex-shrink: 3;
+        margin-left: -45px;
+        div {
+          font-family: "Lobster", serif;
+        }
+      }
+      .searchContainer {
+        display: grid;
+        grid-template-columns: 1.5rem 4fr 1fr;
+        width: 220px;
+        height: 26px;
+        border: 1px solid #dbdbdb;
+        border-radius: 3px;
+        overflow: hidden;
+        background-color: #fafafa;
+        flex-shrink: 5;
+        margin-right: 80px;
+        i {
+          color: #dbdbdb;
+          grid-row: 1;
+          grid-column: 1/2;
+          z-index: 2;
+          padding-left: 87px;
+          padding-top: 10px;
+          font-size: 12px;
+          flex-shrink: 3;
+        }
+        input {
+          border: 0;
+          padding: 0.5rem;
+          grid-column: 2/4;
+          grid-row: 1;
+          outline: none;
+          background-color: #fafafa;
+          flex-shrink: 3;
+        }
+        ::placeholder {
+          color: #dbdbdb;
+          padding-left: 72px;
+        }
+      }
+      .searchContainer:focus-within i {
+        display: none;
+      }
+      .searchContainer:focus-within .searchInput {
+        grid-column: 1/4;
+      }
+      .searchContainer:focus-within .searchBox::placeholder {
+        color: transparent;
+      }
+      .iconSec {
+        padding-left: 140px;
+        display: flex;
+        font-size: 24px;
+        flex-shrink: 5;
+        i {
+          padding-left: 9px;
+          padding-right: 9px;
+        }
+        .navBarProfImg {
+          padding-left: 8px;
+          border-radius: 100%;
+          width: 25px;
+          height: 25px;
+          img {
+            max-width: 100%;
+            max-height: 100%;
+            padding-bottom: 1px;
+          }
+        }
+      }
+    }
+  }
+  .mainWrap {
+    margin-top: 40px;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 30px;
+    .thisMain {
+      padding-top: 40px;
+      display: flex;
+      .mainMidSec {
+        padding-left: 23.6%;
+        display: flex;
+        flex-direction: column;
+        width: 655px;
+      }
+      .mainSubSec {
+        display: flex;
+        flex-direction: column;
+        right: 25%;
+        width: 310px;
+        margin-left: 1%;
+        .fixedDiv {
+          position: fixed;
+          .subFeedTop {
+            display: flex;
+            align-items: center;
+            width: 96%;
+            height: 100px;
+            padding-left: 10px;
+            .userProfile {
+              display: flex;
+              flex-direction: column;
+              padding-left: 18px;
+              margin-right: 80px;
+              .userId {
+                font-size: 14px;
+                font-weight: 600;
+              }
+              .rightUserName {
+                color: #919191;
+                font-size: 16px;
+              }
+            }
+            .switchBtn {
+              color: #27a1f6;
+              font-weight: bold;
+              font-size: 12px;
+              // margin-right:10px;
+              width:50px;
+            }
+          }
+          .subFeedMid {
+            display: flex;
+            flex-direction: column;
+            // width: auto;
+            height: 318px;
+            .subFeedMidHead {
+              display: flex;
+              // justify-content: space-between;
+              padding-right: 1px;
+              padding-bottom: 5px;
+              #rf2H1 {
+                padding-right: 43%;
+                font-size: 14px;
+                color: #8e8e8e;
+                font-weight: 600;
+              }
+              #rf2H2 {
+                padding-top: 1px;
+                font-size: 12px;
+                font-weight: 600;
+              }
+            }
+            .addFriend {
+              display: flex;
+              padding-left: 5px;
+              padding-top: 5px;
+              padding-bottom: 5px;
+              margin-right: -20px;
+              .friendProfilePic {
+                padding-top: 7px;
+                padding-left: 5px;
+                border-radius: 100%;
+                width: 36px;
+                height: 36px;
+                img {
+                  max-width: 100%;
+                  max-height: 100%;
+                }
+              }
+              .friendProfile {
+                display: flex;
+                width: 190px;
+                flex-direction: column;
+                padding-top: 7px;
+                padding-left: 13px;
+                padding-right: 5px;
+                .friendId {
+                  font-size: 15px;
+                  font-weight: 600;
+                }
+                .friendDesc {
+                  color: #919191;
+                  font-size: 12px;
+                }
+              }
+              .followFrdBtn {
+                color: #27a1f6;
+                font-weight: bold;
+                font-size: 12px;
+                padding-top: 14px;
+              }
+            }
+          }
+          .subFeedFooterTop {
+            padding-top: 10px;
+            display: flex;
+            color: #cccccc;
+            width: 100%;
+            height: 14px;
+            a {
+              font-weight: 350;
+              font-size: 11px;
+              margin: 1px 1px;
+            }
+          }
+          .subFeedFooterBottom {
+            padding-top: 2px;
+            color: #cccccc;
+            display: flex;
+            width: 100%;
+            height: 30px;
+            a {
+              font-weight: 350;
+              font-size: 11px;
+              margin: 1px 1px;
+            }
+          }
+          .subFeedFooterLast {
+            display: flex;
+            color: #cccccc;
+            /* border: 1px solid red; */
+            width: 100%;
+            height: 30px;
+            a {
+              font-size: 11.5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (mind-width: 1300px) and (max-width: 1870) {
+  #allSectionId {
+    width: auto;
+  }
+}
+@media (min-width: 500px) and (max-width: 700px) {
+  #thisMainId {
+    padding-left: 1px;
+    width: auto;
+  }
+  #searchId {
+    display: none;
+  }
+  #logoId {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #iconSecId {
+    align-items: flex-end;
+  }
+  #icon1,
+  #icon2,
+  #icon3,
+  #icon4,
+  #icon5 {
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+}
+@media (min-width: 300px) and (max-width: 1000px) {
+  #mainRightSecId {
+    display: none;
+    right: 1%;
+  }
+}

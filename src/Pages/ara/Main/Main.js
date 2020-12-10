@@ -1,9 +1,9 @@
 import React from "react";
-import "./Main.scss";
 import Story from "./Story.js";
 import Feed from "./Feed.js";
+import "./Main.scss";
 
-const ADDFRIENDINFO = [
+const ADD_FRIEND_INFO = [
   {
     id: 0,
     imageURL: "../../../images/aramcho/j.juunn.png",
@@ -75,9 +75,9 @@ class MainAra extends React.Component {
                 <Story></Story>
                 <Feed></Feed>
               </section>
-              <section id="mainRightSecId" className="mainRightSec">
+              <section id="mainRightSecId" className="mainSubSec">
                 <div className="fixedDiv">
-                  <div className="rightFeed1">
+                  <div className="subFeedTop">
                     <div>
                       <img
                         alt="profilePic"
@@ -90,13 +90,13 @@ class MainAra extends React.Component {
                     </div>
                     <div className="switchBtn">전환</div>
                   </div>
-                  <div className="rightFeed2">
-                    <div className="rightFeed2Head">
+                  <div className="subFeedMid">
+                    <div className="subFeedMidHead">
                       <div id="rf2H1">회원님을 위한 추천</div>
                       <div id="rf2H2">모두 보기</div>
                     </div>
                     <div>
-                      {ADDFRIENDINFO.map((el) => {
+                      {ADD_FRIEND_INFO.map((el) => {
                         return (
                           <div className="addFriend">
                             <div className="friendProfilePic">
@@ -114,7 +114,7 @@ class MainAra extends React.Component {
                       })}
                     </div>
                   </div>
-                  <div className="rightFeed3">
+                  <div className="subFeedFooterTop">
                     <a className>소개 &#183;</a>
                     <a className> 도움말 &#183;</a>
                     <a className> 홍보센터 &#183;</a>
@@ -122,14 +122,14 @@ class MainAra extends React.Component {
                     <a className> 채용 정보 &#183;</a>
                     <a className> 개인정보처리방침 &#183;</a>
                   </div>
-                  <div className="rightFeed4">
+                  <div className="subFeedFooterBottom">
                     <a className>약관 &#183;</a>
                     <a className> 위치 &#183;</a>
                     <a className> 인기 계정 &#183;</a>
                     <a className> 해시태그 &#183;</a>
                     <a className> 언어</a>
                   </div>
-                  <div className="rightFeed5">
+                  <div className="subFeedFooterLast">
                     <a className>© 2020 WEESTAGRAM FROM WECODE</a>
                   </div>
                 </div>

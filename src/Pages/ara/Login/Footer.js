@@ -1,9 +1,8 @@
 import React from "react";
+import { Link, withRouter } from "react-router-dom";
 import "./Footer.scss";
-import { Link } from "react-router-dom";
-import { withRouter } from "react-router-dom";
 
-const FOOTCATEGORY1 = [
+const FOOT_CATEGORY_A = [
   { id: 0, title: "블로그" },
   { id: 1, title: "채용 정보" },
   { id: 2, title: "도움말" },
@@ -14,7 +13,7 @@ const FOOTCATEGORY1 = [
   { id: 7, title: "해시태그" },
   { id: 8, title: "위치" },
 ];
-const FOOTCATEGORY2 = [
+const FOOT_CATEGORY_B = [
   { id: 0, title: "미용" },
   { id: 1, title: "댄스 및 공연" },
   { id: 2, title: "피트니스" },
@@ -26,26 +25,32 @@ const FOOTCATEGORY2 = [
 class Footer extends React.Component {
   render() {
     return (
-      <>
-        <footer className="Footer">
-          <div className="footerBlock">
-            <Link to="/main" className="footElement">
-              소개
-            </Link>
-            {FOOTCATEGORY1.map((el) => {
-              return <a className="footElement">{el.title}</a>;
-            })}
-          </div>
-          <div className="footerBlock">
-            {FOOTCATEGORY2.map((el) => {
-              return <a className="footElement">{el.title}</a>;
-            })}
-          </div>
-          <div className="footerBlock">
-            <a className="classB">English © 2020 Weestagram from Wecode</a>
-          </div>
-        </footer>
-      </>
+      <footer className="Footer">
+        <div className="footerBlock">
+          <Link to="/main" className="footElement">
+            소개
+          </Link>
+          {FOOT_CATEGORY_A.map((el, i) => {
+            return (
+              <a className="footElement" key={i}>
+                {el.title}
+              </a>
+            );
+          })}
+        </div>
+        <div className="footerBlock">
+          {FOOT_CATEGORY_B.map((el, i) => {
+            return (
+              <a className="footElement" key={i}>
+                {el.title}
+              </a>
+            );
+          })}
+        </div>
+        <div className="footerBlock">
+          <a className="classB">English © 2020 Weestagram from Wecode</a>
+        </div>
+      </footer>
     );
   }
 }

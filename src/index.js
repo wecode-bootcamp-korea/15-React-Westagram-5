@@ -3,8 +3,6 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import "./Styles/common.scss";
 import "./Styles/reset.scss";
-import Login from "./Pages/ara/Login/Login";
-import Main from "./Pages/ara/Main/Main";
 import Routes from "./Routes.js";
 
 // ReactDOM.render(<Login />,document.getElementById('root'));

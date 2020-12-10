@@ -1,8 +1,7 @@
 import React from "react";
-import "./Login.scss";
+import { Link, withRouter } from "react-router-dom";
 import Footer from "./Footer.js";
-// import { Link } from "react-router-dom";
-import { withRouter } from "react-router-dom";
+import "./Login.scss";
 
 const API = "http://3.35.19.3:8000/account/signin";
 
@@ -20,71 +19,34 @@ class LoginAra extends React.Component {
       productList: [],
     };
   }
-  // handleId = (e) => {
-  //   this.setState({ id: e.target.value });
-  //   // console.log(e.target.value)
-  // };
-  // handlePw = (e) => {
-  //   this.setState({ pw: e.target.value });
-  //   // console.log(e.target.value)
-  // };
-  // handleClick = () => {
-  //   fetch(API, {
-  //     method: "POST",
-  //     body: JSON.stringify({
-  //       email: this.state.id,
-  //       password: this.state.pw,
-  //     }),
-  //   })
-  //     .then((response) => response.json())
-  //     .then((result) => {
-  //       if (result.Authorization) {
-  //         alert("success");
-  //         //   localStorage.setItem("token", result.Authorization);
-  //         this.props.history.push("/main");
-  //       } else {
-  //         alert("fail");
-  //       }
-  //     });
-  // };
   handleInputValueChange = (e) => {
     const { id, value } = e.target;
     this.setState({
       [id]: value,
     });
   };
-  // value들위 비구조화 혹은 구조분해활당 (비구조화하면 this를생략해도된다)
-  //ex : const {id, password, hiddenPW} = this.state;
-  //render와 return 사이에 선언해줌//함수들은 render위에 선언
   deleteToken = () => {
     localStorage.removeItem("token");
   };
   showPassword = () => {
-    // 토글식 : true & fasle
     this.setState({
       hiddenPW: !this.state.hiddenPW,
     });
   };
   buttonChange = () => {
     const { id, pw, testEmail, samplePw } = this.state;
-    if (id.length > 4 && pw.length > 4) {
-      this.setState({
-        btnColor: false,
-        btnStatus: false,
-      });
-    } else {
-      this.setState({
-        btnColor: true,
-        btnStatus: true,
-      });
-    }
+    const passValid = id.length > 4 && pw.length > 4;
+    this.setState({
+      btnColor: passValid ? false : true,
+      btnStatus: passValid ? false : true,
+    });
   };
   checkValidation = (e) => {
     e.preventDefault();
     const { id, pw, testEmail, samplePw } = this.state;
     if (id == testEmail && pw == samplePw && id.includes("@")) {
       alert("successful");
-      this.props.history.push("/main-aram");
+      this.props.history.push("/MainAra");
     } else {
       alert("not valid email or wrong password ");
     }
@@ -102,12 +64,7 @@ class LoginAra extends React.Component {
             <main className="containerMain">
               <article className="containerArticle">
                 <div className="mainLeft">
-                  <img
-                    className="imgMain"
-                    src="../../../images/aramcho/instagram.png"
-                    width="400"
-                    height="618"
-                  />
+                  <img src="../../../images/aramcho/instagram.png" />
                 </div>
                 <div className="mainRight">
                   <div className="logSec1">
@@ -124,9 +81,6 @@ class LoginAra extends React.Component {
                           value={id}
                           className="userNameInput"
                           onChange={this.handleInputValueChange}
-                          // onChange={this.handleId}
-                          //함수옆에 ()붙으면 즉시실행이라는말 그래서 위와같은경우는 () 안붙지만
-                          //arrowFunction같은경우는 붙여야됨 {() => this.handleIdChange()}
                         />
                       </div>
                       <div className="logSecPw">
@@ -136,7 +90,6 @@ class LoginAra extends React.Component {
                           className="passWordInput"
                           value={pw}
                           onChange={this.handleInputValueChange}
-                          // onChange={this.handlePw}
                           placeholder="비밀번호"
                         />
                         <span className="showPw" onClick={this.showPassword}>
@@ -148,13 +101,11 @@ class LoginAra extends React.Component {
                       <button
                         type="button"
                         className={btnColor ? "disabledBtn" : "enabledBtn"}
-                        // onClick={this.handleClick}
                         onClick={this.checkValidation}
                         disabled={this.state.btnStatus}
                       >
                         로그인
                       </button>
-                      {/* <button onClick={this.deleteToken}>delete token</button> */}
                     </div>
                     <div className="logSecUnderBtn">
                       <img
@@ -212,5 +163,3 @@ class LoginAra extends React.Component {
   }
 }
 export default LoginAra;
-
-// 최상단 tag 클레스네임은 이 컴포터는이름과 동일하게하기

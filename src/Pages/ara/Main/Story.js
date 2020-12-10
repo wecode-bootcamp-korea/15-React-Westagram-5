@@ -1,7 +1,7 @@
 import React from "react";
 import "./Story.scss";
 
-const STORYINFO = [
+const STORY_INFO = [
   {
     id: 0,
     imageURL: "../../../images/aramcho/dusdusdus555.png",
@@ -44,9 +44,9 @@ class Story extends React.Component {
     return (
       <>
         <div className="Story">
-          {STORYINFO.map((el) => {
+          {STORY_INFO.map((el, id) => {
             return (
-              <div className="storyWrap">
+              <div className="storyWrap" key={id}>
                 <div className="storyElement">
                   <img src={el.imageURL} />
                 </div>

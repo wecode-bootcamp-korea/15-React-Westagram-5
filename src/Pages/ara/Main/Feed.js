@@ -1,8 +1,8 @@
 import React from "react";
-import "./Feed.scss";
 import Comment from "./Comment.js";
+import "./Feed.scss";
 
-const FEEDINFO = [
+const FEED_INFO = [
   {
     id: 0,
     profileURL: "../../../images/aramcho/samkim2244.png",
@@ -96,9 +96,9 @@ class Feed extends React.Component {
             postedDate="2 days ago"
           ></Comment>
         </div>
-        {FEEDINFO.map((el) => {
+        {FEED_INFO.map((el, i) => {
           return (
-            <div className="Feed">
+            <div className="Feed" key={i}>
               <div className="mFdTop">
                 <div className="postUserPic">
                   <img

@@ -115,7 +115,7 @@ class ArticleSection extends React.Component {
             <button
               onClick={addComment}
               disabled={inputCheck}
-              className={"input-button " + (inputCheck ? "" : "active-button")}
+              className={`input-button ${inputCheck ? "" : "active-button"}`}
             >
               게시
             </button>

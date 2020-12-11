@@ -11,33 +11,67 @@ class LoginHTH extends React.Component {
     };
   }
 
+  // 15기 이재혁님 백엔드 API 통신 연습
+  signUp = () => {
+    fetch("http://10.168.1.134:8000/user/signup", {
+      method: "POST",
+      body: JSON.stringify({
+        email: this.state.id,
+        password: this.state.pw,
+      }),
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        if (result.message === "SUCCESS") window.alert("회원가입 성공");
+        else window.alert("회원가입 실패!!");
+      });
+  };
+
+  // 15기 이재혁님 백엔드 API 통신 연습
+  signIn = () => {
+    fetch("http://10.168.1.134:8000/user/signin", {
+      method: "POST",
+      body: JSON.stringify({
+        account: this.state.id,
+        password: this.state.pw,
+      }),
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        if (result.message === "SUCCESS") {
+          alert("로그인 성공");
+          this.props.history.push("./mainHa");
+        }
+      });
+  };
+
   pressEnter = (event) => {
     if (event.key !== "Enter") return;
 
     const { id, pw } = this.state;
     const isValid = id.includes("@") && pw.length > 4;
 
-    if (isValid) this.checkAccount();
+    if (isValid) this.signIn();
   };
 
-  checkAccount = () => {
-    const { id, pw } = this.state;
-    const trueId = "test@test.com";
-    const truePw = "12345";
-    if (id !== trueId) {
-      this.setState({
-        noticeText:
-          "입력한 사용자명을 사용하는 계정을 찾을수 없습니다. 사용자 이름을 확인하고 다시 시도하세요.",
-      });
-    } else if (pw !== truePw) {
-      this.setState({
-        noticeText: "잘못된 비밀번호입니다. 다시 확인하세요.",
-      });
-    } else {
-      alert("로그인 성공");
-      this.props.history.push("./mainHa");
-    }
-  };
+  // checkAccount = () => {
+  //   const { id, pw } = this.state;
+  //   const trueId = "test@test.com";
+  //   const truePw = "12345";
+  //   if (id !== trueId) {
+  //     this.setState({
+  //       noticeText:
+  //         "입력한 사용자명을 사용하는 계정을 찾을수 없습니다. 사용자 이름을 확인하고 다시 시도하세요.",
+  //     });
+  //   } else if (pw !== truePw) {
+  //     this.setState({
+  //       noticeText: "잘못된 비밀번호입니다. 다시 확인하세요.",
+  //     });
+  //   } else {
+  //     alert("로그인 성공");
+  //     this.props.history.push("./mainHa");
+  //   }
+  // };
 
   checkInputValue = (event) => {
     const { name, value } = event.target;
@@ -48,7 +82,7 @@ class LoginHTH extends React.Component {
 
   render() {
     const { noticeText, id, pw } = this.state;
-    const { checkInputValue, checkAccount, pressEnter } = this;
+    const { checkInputValue, pressEnter, signUp, signIn } = this;
     const isActiveBtn = id.includes("@") && pw.length > 4;
 
     return (
@@ -87,11 +121,14 @@ class LoginHTH extends React.Component {
               show
             </span> */}
           <button
-            onClick={checkAccount}
+            onClick={signIn}
             className={`login-button ${isActiveBtn ? "active-button" : ""}`}
             disabled={!isActiveBtn}
           >
             로그인
+          </button>
+          <button onClick={signUp} className={`login-button active-button`}>
+            회원가입
           </button>
           <div className="hr-box">
             <div className="hr"></div>

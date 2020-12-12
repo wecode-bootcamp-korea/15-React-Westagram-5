@@ -1,4 +1,5 @@
 import React from "react";
+import { API } from "../../../config";
 import "./LoginHTH.scss";
 
 class LoginHTH extends React.Component {
@@ -13,7 +14,7 @@ class LoginHTH extends React.Component {
 
   // 15기 이재혁님 백엔드 API 통신 연습
   signUp = () => {
-    fetch("http://10.168.1.134:8000/user/signup", {
+    fetch(`${API}/user/signup`, {
       method: "POST",
       body: JSON.stringify({
         email: this.state.id,
@@ -29,7 +30,7 @@ class LoginHTH extends React.Component {
 
   // 15기 이재혁님 백엔드 API 통신 연습
   signIn = () => {
-    fetch("http://10.168.1.134:8000/user/signin", {
+    fetch(`${API}/user/signin`, {
       method: "POST",
       body: JSON.stringify({
         account: this.state.id,
@@ -41,7 +42,7 @@ class LoginHTH extends React.Component {
         if (result.message === "SUCCESS") {
           alert("로그인 성공");
           this.props.history.push("./mainHa");
-        }
+        } else alert("로그인 실패");
       });
   };
 

@@ -3,33 +3,47 @@
   justify-content: space-between;
   margin-top: 10px;
 
-  &:hover .delete-button {
+  &:hover .right-div .delete-button {
     opacity: 1;
     cursor: pointer;
   }
 
-  .comment-list-nickname {
-    font-weight: bold;
-    margin-right: 8px;
-    color: black;
-    text-decoration: none;
+  .left-div {
+    display: flex;
+
+    .comment-list-nickname {
+      font-weight: bold;
+      margin-right: 8px;
+      color: black;
+      text-decoration: none;
+    }
+
+    .comment-text {
+      word-break: break-word;
+      max-width: 430px;
+    }
   }
 
-  .delete-button {
-    border: none;
-    font-size: 14px;
-    background-color: white;
-    opacity: 0;
-    outline: none;
-  }
+  .right-div {
+    display: flex;
 
-  .like-button {
-    color: black;
-    cursor: pointer;
-    margin-right: 10px;
-  }
+    .delete-button {
+      height: 14px;
+      border: none;
+      font-size: 14px;
+      background-color: white;
+      opacity: 0;
+      outline: none;
+    }
 
-  .fas {
-    color: #ed4956;
+    .like-button {
+      color: black;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .fas {
+      color: #ed4956;
+    }
   }
 }

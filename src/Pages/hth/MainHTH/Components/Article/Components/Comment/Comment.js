@@ -23,11 +23,11 @@ class Comment extends React.Component {
     return (
       <>
         <li id={id} className="Comment">
-          <div>
+          <div className="left-div">
             <span className="comment-list-nickname">{comment.nickname}</span>
-            <span>{comment.text}</span>
+            <div className="comment-text">{comment.text}</div>
           </div>
-          <div>
+          <div className="right-div">
             <button className="delete-button" onClick={() => removeComment(id)}>
               ···
             </button>

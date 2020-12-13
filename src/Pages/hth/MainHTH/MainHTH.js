@@ -1,6 +1,6 @@
 import React from "react";
 import "./MainHTH.scss";
-import Article from "./Components/Article/Article";
+import Article from "./Components/Article/ArticleSection";
 import SearchView from "./Components/SearchView/SearchView";
 
 class MainHTH extends React.Component {

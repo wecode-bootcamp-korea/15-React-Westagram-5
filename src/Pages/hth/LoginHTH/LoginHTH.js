@@ -12,9 +12,9 @@ class LoginHTH extends React.Component {
     };
   }
 
-  // 15기 이재혁님 백엔드 API 통신 연습
+  // 15기 석여주님 백엔드 API 통신 연습
   signUp = () => {
-    fetch(`${API}/user/signup`, {
+    fetch(`${API}/user/account`, {
       method: "POST",
       body: JSON.stringify({
         email: this.state.id,
@@ -28,17 +28,18 @@ class LoginHTH extends React.Component {
       });
   };
 
-  // 15기 이재혁님 백엔드 API 통신 연습
+  // 15기 석여주님 백엔드 API 통신 연습
   signIn = () => {
-    fetch(`${API}/user/signin`, {
+    fetch(`${API}/user/login`, {
       method: "POST",
       body: JSON.stringify({
-        account: this.state.id,
+        email: this.state.id,
         password: this.state.pw,
       }),
     })
       .then((response) => response.json())
       .then((result) => {
+        console.log(result);
         if (result.message === "SUCCESS") {
           alert("로그인 성공");
           this.props.history.push("./mainHa");

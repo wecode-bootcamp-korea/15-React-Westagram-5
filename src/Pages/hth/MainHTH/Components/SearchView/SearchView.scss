@@ -1,0 +1,21 @@
+.SearchView {
+  display: flex;
+  height: 67px;
+  border-bottom: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+  padding: 10px;
+  align-items: center;
+  font-weight: 600;
+  margin: 0;
+
+  div {
+    img {
+      height: 32px;
+      border-radius: 16px;
+      margin-right: 10px;
+    }
+  }
+
+  &:hover {
+    background-color: #fafafa;
+  }
+}

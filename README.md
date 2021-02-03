@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+Contributors Forks Stargazers Issues MIT License LinkedIn
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Logo
 
-In the project directory, you can run:
+Best-README-Template
+An awesome README template to jumpstart your projects!
+Explore the docs »
 
-### `yarn start`
+View Demo · Report Bug · Request Feature
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Table of Contents
+About The Project
+Built With
+Getting Started
+Prerequisites
+Installation
+Usage
+Roadmap
+Contributing
+License
+Contact
+Acknowledgements
+About The Project
+Product Name Screen Shot
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
-### `yarn test`
+Here's why:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Your time should be focused on creating something amazing. A project that solves a problem and helps others
+You shouldn't be doing the same tasks over and over like creating a README from scratch
+You should element DRY principles to the rest of your life 😄
+Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
 
-### `yarn build`
+A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Built With
+This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Bootstrap
+JQuery
+Laravel
+Getting Started
+This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Prerequisites
+This is an example of how to list things you need to use the software and how to install them.
 
-### `yarn eject`
+npm
+npm install npm@latest -g
+Installation
+Get a free API Key at https://example.com
+Clone the repo
+git clone https://github.com/your_username_/Project-Name.git
+Install NPM packages
+npm install
+Enter your API in config.js
+const API_KEY = 'ENTER YOUR API';
+Usage
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+For more examples, please refer to the Documentation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Roadmap
+See the open issues for a list of proposed features (and known issues).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Contributing
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Fork the Project
+Create your Feature Branch (git checkout -b feature/AmazingFeature)
+Commit your Changes (git commit -m 'Add some AmazingFeature')
+Push to the Branch (git push origin feature/AmazingFeature)
+Open a Pull Request
+License
+Distributed under the MIT License. See LICENSE for more information.
 
-## Learn More
+Contact
+Your Name - @your_twitter - email@example.com
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Project Link: https://github.com/your_username/repo_name
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Acknowledgements
+GitHub Emoji Cheat Sheet
+Img Shields
+Choose an Open Source License
+GitHub Pages
+Animate.css
+Loaders.css
+Slick Carousel
+Smooth Scroll
+Sticky Kit
+JVectorMap
+Font Awesome
